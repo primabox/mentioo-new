@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Děkujeme za váš nákup | Mentioo</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="font-[Poppins] overflow-x-hidden">
+    <div class="bubble-field overflow-x-hidden overflow-y-hidden md:block hidden">
+        <div class="bubble w-[14px] h-[14px] top-[47%] left-[5%]"></div>
+        <div class="bubble opacity-20 w-[18px] h-[18px] top-[27%] left-[72%]"></div>
+        <div class="bubble w-[14px] h-[14px] top-[32%] left-[18%]"></div>
+        <div class="bubble w-[13px] h-[13px] top-[40%] left-[88%]"></div>
+        <div class="bubble w-[5px] h-[5px] top-[45%] left-[93%]"></div>
+        <div class="bubble w-[3px] h-[3px] top-[32%] left-[16%]"></div>
+        <div class="bubble w-[13px] h-[13px] top-[60%] left-[76%]"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.png" alt="Logo" class="w-32" />
+                </a>
+            </div>
+
+            <!-- Searchbar -->
+            <div class="searchbar-container">
+                <form class="search-form" role="search">
+                    <div class="search-wrapper">
+                        <span class="search-icon">
+                            <i class="fas fa-search translate-y-px"></i>
+                        </span>
+                        <input type="search" name="q" aria-label="Hledat" placeholder="Hledat" class="search-input" />
+                    </div>
+                </form>
+            </div>
+
+            <!-- Hamburger (mobile) -->
+            <div class="hamburger">
+                <button id="navbar-toggle" class="hamburger-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <a href="#" class="mobile-link">Nabídka kurzů</a>
+                <a href="#" class="mobile-link">Lektoři</a>
+                <a href="#" class="mobile-link">Blog</a>
+                <a href="#" class="mobile-link">Přihlásit se</a>
+                <a href="#" class="mobile-btn">Zaregistrovat se</a>
+            </div>
+
+            <!-- Desktop menu -->
+            <div id="navbar-menu" class="navbar-menu">
+                <ul class="nav-links">
+                    <li class="nav-item group">
+                        <a href="#" class="nav-link">
+                            Nabídka kurzů
+                        </a>
+                        <i class="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+                        <div class="dropdown">
+                            <div class="py-2">
+                                <a href="#" class="dropdown-link">Programování</a>
+                                <a href="#" class="dropdown-link">Design</a>
+                                <a href="#" class="dropdown-link">Marketing</a>
+                                <a href="#" class="dropdown-link">Business</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="hover:text-[#2563eb]">Lektoři</a></li>
+                    <li><a href="#" class="hover:text-[#2563eb]">Blog</a></li>
+                </ul>
+
+                <!-- Tlačítka -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="btn-outline">Přihlásit se</a>
+                    <a href="#" class="btn-primary">Zaregistrovat se</a>
+                </div>
+
+                <!-- Ikony -->
+                <div class="flex items-center gap-3">
+                    <a href="nakupni-kosik.html" class="icon-btn">
+                        <img src="img/Kosik.png" alt="Cart" class="w-6 h-6" />
+                    </a>
+                    <a href="#" class="icon-btn-alt">
+                        <img src="img/network.png" alt="Globe" class="w-5 h-5" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- THANK YOU SECTION -->
+    <section class="thankyou-section">
+        <div class="thankyou-container">
+            <div class="thankyou-icon">
+                <img src="img/paymentDone.png" alt="Success" class="">
+            </div>
+            
+            <h1 class="thankyou-title">Děkujeme za váš nákup</h1>
+            
+            <p class="thankyou-text">Vaše objednávka byla úspěšně zpracována. Přístup k zakoupeným kurzům naleznete ve svém profilu.</p>
+            
+            <div class="thankyou-buttons">
+                <a href="index.html" class="btn-continue">Pokračovat v nákupu</a>
+                <a href="muj-profil.html" class="btn-profile">Můj profil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section">
+        <div class="features-container">
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-1">
+                        <img src="img/calendar_month.png" alt="Přístup">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Přístup po dobu 1 roku</h3>
+                        <p class="feature-text">Získejte plný přístup ke všem lekcím a materiálům po celý rok.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-2">
+                        <img src="img/assignment.png" alt="Online">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Online cvičení a další materiály</h3>
+                        <p class="feature-text">Procvičujte nové znalosti pomocí online cvičení.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-3">
+                        <img src="img/book_ribbonPurple.png" alt="Poznámky">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Ukládání poznámek z lekcí</h3>
+                        <p class="feature-text">Ukládejte si své poznámky z lekcí a kdykoli se k nim vraťte.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-4">
+                        <img src="img/person.png" alt="Komunita" class="w-6 h-6">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Komunita a podpora lektorů</h3>
+                        <p class="feature-text">Připojte se k podpůrující komunitě a získejte pomoc přímo od lektorů.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer bg-[#F5F9FF]">
+        <div class="footer-container">
+            <!-- Logo  -->
+            <div class="footer-logo">
+                <img src="img/FooterLogo.png" alt="Mentio_logo" class="footer-logo-img">
+            </div>
+
+            <!-- Obsah -->
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <!-- INFO -->
+                    <div class="footer-info">
+                        <div class="footer-info-text">
+                            <p class="font-semibold text-lg">Mentio s.r.o</p>
+                            <p class="mt-2">U Lipek 1234/56, 101 00 Praha 10</p>
+                            <p class="mt-1"><span class="font-bold">IČO:</span> 12345678</p>
+                            <p class="mt-2 leading-relaxed ">Spisová značka C 987654 vedená u Městského soudu v Praze
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4X4 KATEGORIE-->
+                    <div class="footer-categories">
+                        <div>
+                            <h4 class="footer-heading">Kategorie kurzů</h4>
+                            <ul class="footer-links">
+                                <li><a class="footer-link" href="#">Kategorie 1</a></li>
+                                <li><a class="footer-link" href="#">Kategorie 2</a></li>
+                                <li><a class="footer-link" href="#">Kategorie 3</a></li>
+                                <li><a class="footer-link" href="#">Kategorie 4</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="footer-heading">Typy kurzů</h4>
+                            <ul class="footer-links">
+                                <li><a class="footer-link" href="#">Typ kurzů 1</a></li>
+                                <li><a class="footer-link" href="#">Typ kurzů 2</a></li>
+                                <li><a class="footer-link" href="#">Typ kurzů 3</a></li>
+                                <li><a class="footer-link" href="#">Typ kurzů 4</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="footer-heading">Typy kurzů</h4>
+                            <ul class="footer-links">
+                                <li><a class="footer-link" href="#">Typ kurzů 1</a></li>
+                                <li><a class="footer-link" href="#">Typ kurzů 2</a></li>
+                                <li><a class="footer-link" href="#">Typ kurzů 3</a></li>
+                                <li><a class="footer-link" href="#">Typ kurzů 4</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="footer-heading">Typy kurzů</h4>
+                            <ul class="footer-links">
+                                <li><a class="footer-link" href="#">Typ kurzů 1</a></li>
+                                <li><a class="footer-link" href="#">Typ kurzů 2</a></li>
+                                <li><a class="footer-link" href="#">Typ kurzů 3</a></li>
+                                <li><a class="footer-link" href="#">Typ kurzů 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- O nás -->
+                    <div class="footer-about">
+                        <h4 class="footer-heading">O nás</h4>
+                        <ul class="footer-links">
+                            <li><a class="footer-link" href="#">Lektoři</a></li>
+                            <li><a class="footer-link" href="#">Kariéra</a></li>
+                            <li><a class="footer-link" href="#">Blog</a></li>
+                            <li><a class="footer-link" href="#">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- divider -->
+            <div class="footer-divider"></div>
+
+            <!-- COPYRIGHT + IKONY -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">© 2025 Lorem ipsum</div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="img/instagram.svg" alt="Instagram" class="social-icon h-[24px] w-[24px]">
+                    </a>
+
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <img src="img/facebook.svg" alt="Facebook" class="social-icon h-[24px] w-[24px]">
+                    </a>
+
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <img src="img/linkedin.svg" alt="LinkedIn" class="social-icon h-[24px] w-[24px]">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/hamburger.js"></script>
+    <script type="module" src="js/bubbles.js"></script>
+</body>
+
+</html>
+

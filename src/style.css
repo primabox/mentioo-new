@@ -225,16 +225,16 @@
       }
     }
 
-    .stat-box {
+    .hp-stat-box {
       @apply bg-white rounded-2xl shadow-lg w-[215px] h-[127px] flex flex-col items-start justify-center px-6 py-6 gap-1;
     }
 
-    .stat-number {
-      @apply text-[32px] font-semibold text-[#003F91];
+    .hp-stat-number {
+      @apply text-[32px] font-semibold text-[#003A91];
     }
 
-    .stat-label {
-      @apply text-lg text-gray-600 mt-1;
+    .hp-stat-label {
+      @apply text-[18px] text-[#4D4D4D] mt-1;
     }
 
 
@@ -3392,54 +3392,54 @@
     }
 
     /* ===== HERO SECTION ===== */
-    .hero-gradient {
+    .ce-hero-gradient {
       @apply relative rounded-[48px] overflow-visible z-[1] mb-[30px];
       padding: 40px 12rem 80px 0px;
       margin-right: -28rem;
     }
 
-    .hero-bg {
+    .ce-hero-bg {
       @apply absolute rounded-[48px] bg-gradient-to-r from-[#28A6FF] to-[#00E8E8] w-[1700px] h-[370px] top-0 left-1/2 -translate-x-1/2 -z-[1] opacity-[0.08];
     }
 
-    .module-text {
+    .ce-module-text {
       @apply inline-flex items-center gap-2 py-1.5 px-3.5 rounded-2xl text-lg font-medium text-[#0069B2] uppercase tracking-wide mb-4;
     }
 
-    .hero-title {
+    .ce-hero-title {
       @apply text-[56px] text-[#1C1C1C] max-w-[1040px] font-semibold leading-[100%] mb-8;
     }
 
-    .hero-description {
+    .ce-hero-description {
       @apply text-xl text-[#1C1C1C] mb-4 max-w-[786px] max-h-[60px] font-normal leading-relaxed;
     }
 
     /* Instructor Info in Hero */
-    .instructor-info {
+    .ce-instructor-info {
       @apply flex flex-col gap-3 mt-6;
     }
 
-    .instructor-profile {
+    .ce-instructor-profile {
       @apply flex items-center gap-3;
     }
 
-    .instructor-avatar {
+    .ce-instructor-avatar {
       @apply w-12 h-12 rounded-full object-cover;
     }
 
-    .instructor-details {
+    .ce-instructor-details {
       @apply flex items-center gap-2;
     }
 
-    .instructor-label {
+    .ce-instructor-label {
       @apply text-base text-[#333333] font-semibold;
     }
 
-    .instructor-name {
+    .ce-instructor-name {
       @apply text-base text-[#1C1C1C] underline;
     }
 
-    .instructor-tags {
+    .ce-instructor-tags {
       @apply flex items-center gap-2 mt-[8px];
     }
 
@@ -3447,19 +3447,19 @@
       @apply px-3 py-1 rounded text-sm font-medium;
     }
 
-    .tag-bestseller {
+    .ce-tag-bestseller {
       @apply bg-[#CCFFE7] text-[#006636];
     }
 
-    .tag-trial {
+    .ce-tag-trial {
       @apply bg-[#EFE6FF] text-[#7045C2];
     }
 
-    .lesson-status {
+    .ce-lesson-status {
       @apply flex items-center gap-2 py-2 px-3.5 font-medium text-sm text-[#1C1C1C];
     }
 
-    .lesson-status img {
+    .ce-lesson-status img {
       @apply w-5 h-5 object-contain;
     }
 
@@ -5827,11 +5827,11 @@
       opacity: 0.08;
     }
 
-    .module-text {
+    .cd-module-text {
       @apply inline-flex items-center gap-2 py-1.5 px-3.5 rounded-2xl text-[18px] font-[500] text-[#0069B2] uppercase tracking-wide mb-4;
     }
 
-    cd-hero-title {
+    .cd-hero-title {
       @apply text-[56px] text-[#1C1C1C] max-w-[1040px] font-semibold leading-[100%] mb-4 mt-2;
     }
 
@@ -8655,7 +8655,7 @@
     }
 
     /* ===== HERO SECTION ===== */
-    .hero-gradient {
+    .ld-hero-gradient {
       @apply relative rounded-[48px] p-10 mb-6 overflow-visible;
       margin-right: -32rem;
       margin-left: -6rem;
@@ -8664,23 +8664,23 @@
       z-index: 1;
     }
 
-    .hero-bg {
+    .ld-hero-bg {
       @apply absolute inset-0 rounded-3xl bg-gradient-to-r from-[#28A6FF] to-[#00E8E8];
       z-index: -1;
       opacity: 8%;
     }
 
-    .module-text {
+    .ld-module-text {
       @apply inline-flex items-start gap-2 py-1.5 rounded-2xl text-[18px] font-[500] text-[#0069B2] uppercase tracking-wide mb-4;
       padding-left: 0;
       padding-right: 14px;
     }
 
-    .hero-title {
+    .ld-hero-title {
       @apply text-[56px] text-[#1C1C1C] max-w-[1040px] font-semibold leading-[100%] mb-4;
     }
 
-    .hero-description {
+    .ld-hero-description {
       @apply text-[20px] text-[#1C1C1C] mb-4 max-w-[786px] max-h-[60px] font-[400] leading-relaxed;
     }
 
@@ -8690,11 +8690,11 @@
       padding-right: 14px;
     }
 
-    .lesson-status:hover {
+    .ld-lesson-status:hover {
       @apply text-[#0069B2];
     }
 
-    .lesson-status img {
+    .ld-lesson-status img {
       @apply w-5 h-5 object-contain;
     }
 
@@ -8761,16 +8761,16 @@
     }
 
     /* ===== TABS ===== */
-    .tabs-wrapper {
+    .ld-tabs-wrapper {
       @apply px-6;
     }
 
-    .tabs {
+    .ld-tabs {
       @apply flex gap-6;
       position: relative;
     }
 
-    .tabs::before {
+    .ld-tabs::before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -8781,14 +8781,14 @@
       z-index: 1;
     }
 
-    .tab {
+    .ld-tab {
       @apply py-3.5 px-0 border-0 bg-transparent text-[#717171] text-[14px] font-medium cursor-pointer transition-all;
       position: relative;
       display: inline-block;
       white-space: nowrap;
     }
 
-    .tab::after {
+    .ld-tab::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -8801,27 +8801,27 @@
       z-index: 2;
     }
 
-    .tab.active {
+    .ld-tab.active {
       @apply text-[#0069B2];
     }
 
-    .tab.active::after {
+    .ld-tab.active::after {
       width: 100%;
       background: #0069B2;
     }
 
-    .tab:hover {
+    .ld-tab:hover {
       @apply text-[#0069B2];
     }
 
     /* ===== TAB CONTENT ===== */
-    .tab-content {
+    .ldtab-content {
       @apply p-6;
     }
 
     /* Skrýt tooltip když je tab-content skrytý */
-    .tab-content[style*="display: none"] .note-hover-tooltip,
-    .tab-content[style*="display:none"] .note-hover-tooltip {
+    .ld-tab-content[style*="display: none"] .note-hover-tooltip,
+    .ld-tab-content[style*="display:none"] .note-hover-tooltip {
       display: none !important;
     }
 
@@ -8942,7 +8942,7 @@
     }
 
     /* ===== SIDEBAR LAYOUT ===== */
-    .sidebar {
+    .ld-sidebar {
       @apply h-fit;
       width: 383px;
       position: relative;
@@ -11320,25 +11320,25 @@
     }
 
     /* ===== HERO SECTION (from detail-kurzu) ===== */
-    .hero-section {
+    .pf-hero-section {
       @apply relative flex justify-center pt-38 pb-8 overflow-x-hidden overflow-y-visible;
       padding-left: 80px;
       padding-right: 40px;
     }
 
-    .hero-wrapper {
+    .pf-hero-wrapper {
       @apply relative flex items-center justify-center w-full max-w-[1750px] z-1;
     }
 
-    .content-layout {
+    .pf-content-layout {
       @apply w-full mx-auto relative justify-center;
     }
 
-    .content-layout>div:first-child {
+    .pf-content-layout>div:first-child {
       @apply relative z-[1];
     }
 
-    .hero-gradient {
+    .pf-hero-gradient {
       @apply relative rounded-[48px] overflow-visible mx-auto;
       width: 1744px;
       height: 260px;
@@ -11350,7 +11350,7 @@
       justify-content: center;
     }
 
-    .hero-bg {
+    .pf-hero-bg {
       @apply absolute rounded-[48px] bg-gradient-to-r from-[#28A6FF] to-[#00E8E8];
       width: 100%;
       height: 100%;
@@ -11360,11 +11360,11 @@
       opacity: 0.08;
     }
 
-    .hero-title {
+    .pf-hero-title {
       @apply text-[56px] text-[#1C1C1C] max-w-[1040px] font-semibold leading-[100%] mb-4 mt-2 ml-[60px];
     }
 
-    .hero-description {
+    .pf-hero-description {
       @apply text-[20px] text-[#1C1C1C] my-6 max-w-[786px] max-h-[60px] font-[400] leading-relaxed;
     }
 
@@ -14426,25 +14426,25 @@
     }
 
     /* ===== HERO SECTION ===== */
-    .hero-section {
+    .cart-hero-section {
       @apply relative flex justify-center pt-36 overflow-x-hidden overflow-y-visible;
       padding-left: 100px;
       padding-right: 50px;
     }
 
-    .hero-wrapper {
+    .cart-hero-wrapper {
       @apply relative flex items-center justify-center w-full max-w-[1750px] z-1;
     }
 
-    .content-layout {
+    .cart-content-layout {
       @apply w-full mx-auto relative justify-center;
     }
 
-    .content-layout>div:first-child {
+    .cart-content-layout>div:first-child {
       @apply relative z-[1];
     }
 
-    .hero-gradient {
+    .cart-hero-gradient {
       @apply relative rounded-[48px] overflow-visible mx-auto;
       width: 1744px;
       max-width: 100%;
@@ -14457,7 +14457,7 @@
       justify-content: center;
     }
 
-    .hero-bg {
+    .cart-hero-bg {
       @apply absolute rounded-[48px] bg-gradient-to-r from-[#28A6FF] to-[#00E8E8];
       width: 100%;
       height: 100%;
@@ -14467,7 +14467,7 @@
       opacity: 0.08;
     }
 
-    .hero-title {
+    .cart-hero-title {
       @apply text-[56px] text-[#1C1C1C] max-w-[1040px] font-semibold leading-[100%] mb-4 mt-2 ml-[30px];
     }
 
@@ -15822,25 +15822,25 @@
     }
 
     /* ===== HERO SECTION ===== */
-    .hero-section {
+    .co-hero-section {
       @apply relative flex justify-center pt-36 overflow-x-hidden overflow-y-visible;
       padding-left: 80px;
       padding-right: 25px;
     }
 
-    .hero-wrapper {
+    .co-hero-wrapper {
       @apply relative flex items-center justify-center w-full max-w-[1750px] z-1;
     }
 
-    .content-layout {
+    .co-content-layout {
       @apply w-full mx-auto relative justify-center;
     }
 
-    .content-layout>div:first-child {
+    .co-content-layout>div:first-child {
       @apply relative z-[1];
     }
 
-    .hero-gradient {
+    .co-hero-gradient {
       @apply relative rounded-[48px] overflow-visible mx-auto;
       width: 1744px;
       max-width: 100%;
@@ -15853,7 +15853,7 @@
       justify-content: center;
     }
 
-    .hero-bg {
+    .co-hero-bg {
       @apply absolute rounded-[48px] bg-gradient-to-r from-[#28A6FF] to-[#00E8E8];
       width: 100%;
       height: 100%;
@@ -15863,7 +15863,7 @@
       opacity: 0.08;
     }
 
-    .hero-title {
+    .co-hero-title {
       @apply text-[56px] text-[#1C1C1C] max-w-[1040px] font-semibold leading-[100%] mb-4 mt-2 ml-[50px];
     }
 
@@ -16946,7 +16946,7 @@
     }
 
     /* ===== HERO SECTION ===== */
-    .hero-gradient {
+    .ip-hero-gradient {
       @apply relative rounded-[48px] overflow-visible;
       padding: 60px 3rem 60px 3rem;
       z-index: 1;
@@ -16959,7 +16959,7 @@
       margin-bottom: 80px;
     }
 
-    .hero-bg {
+    .ip-hero-bg {
       @apply absolute rounded-[48px] bg-gradient-to-r from-[#28A6FF] to-[#00E8E8];
       width: 1744px;
       height: 100%;
@@ -16969,26 +16969,26 @@
       opacity: 0.08;
     }
 
-    .lektor-hero-content {
+    .ip-lektor-hero-content {
       @apply relative z-10 flex items-center gap-16;
     }
 
-    .hero-divider {
+    .ip-hero-divider {
       width: 1px;
       height: 252px;
       background-color: #A9DBFF;
       flex-shrink: 0;
     }
 
-    .lektor-main-info {
+    .ip-lektor-main-info {
       @apply flex items-center gap-26 ml-3;
     }
 
-    .lektor-avatar {
+    .ip-lektor-avatar {
       @apply flex-shrink-0 relative;
     }
 
-    .lektor-avatar::before {
+    .ip-lektor-avatar::before {
       content: '';
       position: absolute;
       width: 360px;
@@ -17002,48 +17002,48 @@
       z-index: -1;
     }
 
-    .lektor-avatar-img {
+    .ip-lektor-avatar-img {
       width: 320px;
       height: 320px;
       @apply rounded-full object-cover shadow-lg;
     }
 
-    .lektor-info {
+    .ip-lektor-info {
       @apply flex-1;
     }
 
-    .lektor-tag {
+    .ip-lektor-tag {
       @apply inline-block px-3 py-1 bg-[#EFE6FF] text-[#7045C2] text-sm font-medium mb-4;
     }
 
-    .lektor-name {
+    .ip-lektor-name {
       @apply text-[56px] font-semibold text-gray-900 mb-3;
     }
 
-    .lektor-title {
+    .ip-lektor-title {
       @apply text-[20px] text-[#1C1C1C] mb-8;
     }
 
-    .lektor-actions {
+    .ip-lektor-actions {
       @apply flex gap-3;
     }
 
-    .lektor-btn-primary {
+    .ip-lektor-btn-primary {
       @apply px-5 py-3 bg-[#D4EDFF] text-[#0069B2] font-medium rounded-[32px] cursor-pointer;
       transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .lektor-btn-primary:hover {
+    .ip-lektor-btn-primary:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(0, 105, 178, 0.2);
     }
 
-    .lektor-btn-secondary {
+    .ip-lektor-btn-secondary {
       @apply px-5 py-3 border border-[#0069B2] text-[#0069B2] font-medium rounded-[32px] cursor-pointer;
       transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .lektor-btn-secondary:hover {
+    .ip-lektor-btn-secondary:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(0, 105, 178, 0.15);
     }
@@ -17052,28 +17052,28 @@
       @apply flex-shrink-0 pr-32;
     }
 
-    .lektor-stat {
+    .ip-lektor-stat {
       @apply flex items-center;
     }
 
-    .stat-icon {
+    .ip-stat-icon {
       @apply w-10 h-10 rounded-full flex items-center justify-center text-[#FFBE0A];
     }
 
-    .stat-content {
+    .ip-stat-content {
       @apply flex flex-col;
     }
 
-    .stat-value {
+    .ip-stat-value {
       @apply text-sm text-[16px] text-[#333333];
     }
 
-    .lektor-social {
+    .ip-lektor-social {
       @apply flex justify-start ml-[5px] mt-[50px];
       gap: 20px;
     }
 
-    .lektor-social .social-link {
+    .ip-lektor-social .social-link {
       @apply flex items-center justify-center text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors text-xs;
       width: 44px;
       height: 44px;
@@ -17167,16 +17167,16 @@
     }
 
     /* ===== TABS ===== */
-    .tabs-wrapper {
+    .ip-tabs-wrapper {
       @apply pl-6;
     }
 
-    .tabs {
+    .ip-tabs {
       @apply flex gap-6;
       position: relative;
     }
 
-    .tabs::before {
+    .ip-tabs::before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -17187,7 +17187,7 @@
       z-index: 1;
     }
 
-    .tabs::after {
+    .ip-tabs::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -17200,29 +17200,29 @@
       z-index: 2;
     }
 
-    .tab {
+    .ip-tab {
       @apply py-3.5 px-0 border-0 bg-transparent text-[#717171] text-[14px] font-medium cursor-pointer transition-all;
       position: relative;
       display: inline-block;
       white-space: nowrap;
     }
 
-    .tab.active {
+    .ip-tab.active {
       @apply text-[#0069B2];
     }
 
-    .tab:hover {
+    .ip-tab:hover {
       @apply text-[#0069B2];
     }
 
     /* ===== TAB CONTENT ===== */
-    .tab-content {
+    .ip-tab-content {
       @apply py-6 pl-6;
     }
 
     /* Skrýt tooltip když je tab-content skrytý */
-    .tab-content[style*="display: none"] .note-hover-tooltip,
-    .tab-content[style*="display:none"] .note-hover-tooltip {
+    .ip-tab-content[style*="display: none"] .note-hover-tooltip,
+    .ip-tab-content[style*="display:none"] .note-hover-tooltip {
       display: none !important;
     }
 
@@ -18591,26 +18591,26 @@
       padding-left: 80px;
     }
 
-    .hero-section {
+    .test-hero-section {
       @apply relative flex justify-center pb-8 overflow-x-hidden overflow-y-visible;
       padding-top: 0;
       padding-left: 80px;
       padding-right: 40px;
     }
 
-    .hero-wrapper {
+    .test-hero-wrapper {
       @apply relative flex items-center justify-center w-full max-w-[1750px] z-1;
     }
 
-    .content-layout {
+    .test-content-layout {
       @apply w-full mx-auto relative justify-center;
     }
 
-    .content-layout>div:first-child {
+    .test-content-layout>div:first-child {
       @apply relative z-[1];
     }
 
-    .hero-gradient {
+    .test-hero-gradient {
       @apply relative rounded-[48px] overflow-visible mx-auto;
       width: 1744px;
       height: 260px;
@@ -18622,7 +18622,7 @@
       justify-content: center;
     }
 
-    .hero-bg {
+    .test-hero-bg {
       @apply absolute rounded-[48px] bg-gradient-to-r from-[#28A6FF] to-[#00E8E8];
       width: 100%;
       height: 100%;
@@ -18632,7 +18632,7 @@
       opacity: 0.08;
     }
 
-    .hero-title {
+    .test-hero-title {
       @apply text-[48px] text-[#1C1C1C] max-w-[1040px] font-semibold leading-[100%] mb-24 mt-2 ml-[60px];
     }
 
@@ -19463,7 +19463,7 @@
     }
 
     /* ===== SIDEBAR ===== */
-    .profile-sidebar {
+    .test-sidebar {
       @apply flex flex-col gap-6;
       margin-top: -330px;
       margin-left: -150px;

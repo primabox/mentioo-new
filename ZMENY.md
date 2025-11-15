@@ -1,28 +1,31 @@
 # Návrh implementace přejmenování duplicitních CSS tříd
 
-**Datum vytvoření:** 14. listopadu 2025  
-**Status:** Návrh - Před implementací  
+**Datum vytvoření:** 14. listopadu 2025
+**Status:** Návrh - Před implementací
 **Založeno na:** DUPLICITY_DOKUMENTACE.md
 
 ---
 
 ## ⚠️ DŮLEŽITÉ UPOZORNĚNÍ
 
-Tento dokument popisuje **alternativní přístup** k řešení duplicit v `style.css`. 
+Tento dokument popisuje **alternativní přístup** k řešení duplicit v `style.css`.
 
 ### Doporučený přístup (PRIORITA 1):
-✅ **Odstranit duplicitní sekce** a používat sdílené komponenty  
-✅ Zachovat pouze jednu verzi každé komponenty  
-✅ Všechny HTML soubory budou používat stejné třídy  
+
+✅ **Odstranit duplicitní sekce** a používat sdílené komponenty
+✅ Zachovat pouze jednu verzi každé komponenty
+✅ Všechny HTML soubory budou používat stejné třídy
 
 ### Popisovaný přístup (ALTERNATIVA):
-⚠️ **Přejmenovat duplicitní třídy** podle sekce  
-⚠️ Vyžaduje úpravy CSS i HTML souborů  
-⚠️ Složitější údržba, ale zachovává nezávislost sekcí  
+
+⚠️ **Přejmenovat duplicitní třídy** podle sekce
+⚠️ Vyžaduje úpravy CSS i HTML souborů
+⚠️ Složitější údržba, ale zachovává nezávislost sekcí
 
 ---
 
 ## 📋 Obsah
+
 1. [Mapování HTML souborů na CSS sekce](#mapování-html-souborů-na-css-sekce)
 2. [Konvence pojmenování](#konvence-pojmenování)
 3. [Detailní plán přejmenování](#detailní-plán-přejmenování)
@@ -34,6 +37,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ## 1. Mapování HTML souborů na CSS sekce
 
 ### 1.1 INDEX (Hlavní stránka)
+
 - **HTML soubor:** `index.html`
 - **CSS sekce:** Řádky 3-1506 (INDEX)
 - **Třídy:** Zachovat původní názvy (`.header`, `.navbar`, `.logo`, atd.)
@@ -42,6 +46,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.2 COURSE DETAIL (Detail kurzu - nezahájený)
+
 - **HTML soubor:** `detail-kurzu.html`
 - **CSS sekce:** Řádky 5601-8478 (COURSE DETAIL PAGE - KURZ DETAIL)
 - **Prefix:** `cd-` (course-detail)
@@ -50,7 +55,8 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.3 COURSE ENROLLED (Detail kurzu - přihlášený)
-- **HTML soubory:** 
+
+- **HTML soubory:**
   - `detail-kurzu-prihlaseny.html`
   - `detail-kurzu-prihlaseny-hotovo.html`
   - `detail-kurzu-nezahajeny.html`
@@ -61,6 +67,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.4 LESSON DETAIL (Detail lekce)
+
 - **HTML soubor:** `detail-lekce.html`
 - **CSS sekce:** Řádky 8478-11174 (DETAIL STYLE)
 - **Prefix:** `ld-` (lesson-detail)
@@ -69,6 +76,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.5 PROFILE (Můj profil)
+
 - **HTML soubor:** `muj-profil.html`
 - **CSS sekce:** Řádky 11177-14290 (PROFILE PAGE - MŮJ PROFIL)
 - **Prefix:** `pf-` (profile)
@@ -77,6 +85,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.6 SHOPPING CART (Nákupní košík)
+
 - **HTML soubory:**
   - `nakupni-kosik.html`
   - `nakupni-kosik-prazdny.html`
@@ -87,6 +96,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.7 CHECKOUT (Pokladna)
+
 - **HTML soubory:**
   - `pokladna.html`
   - `pokladna2.html`
@@ -97,6 +107,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.8 INSTRUCTOR PROFILE (Profil lektora)
+
 - **HTML soubor:** `profil-lektora.html`
 - **CSS sekce:** Řádky 16822-18432 (PROFIL LEKTORA)
 - **Prefix:** `ip-` (instructor-profile)
@@ -105,6 +116,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.9 TESTS (Testové stránky)
+
 - **HTML soubory:**
   - `test1.html` až `test7.html`
   - `test7-complete.html`, `test7-failed.html`
@@ -116,6 +128,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.10 CATEGORY (Kategorie kurzů)
+
 - **HTML soubor:** `kategorie-kurzu.html`
 - **CSS sekce:** Řádky 1507-3072 (HERO SECTION CATEGORY + filtry)
 - **Prefix:** `cat-` (category)
@@ -124,6 +137,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ---
 
 ### 1.11 THANK YOU PAGE
+
 - **HTML soubor:** `thankYou.html`
 - **CSS sekce:** Řádky 3072-3361 (MIGRATED: THANK YOU PAGE & FEATURES)
 - **Prefix:** `ty-` (thank-you)
@@ -133,6 +147,7 @@ Tento dokument popisuje **alternativní přístup** k řešení duplicit v `styl
 ## 2. Konvence pojmenování
 
 ### 2.1 Pravidla pro prefixy
+
 ```
 INDEX:              Žádný prefix (referenční)
 Course Detail:      cd-
@@ -148,6 +163,7 @@ Thank You:          ty-
 ```
 
 ### 2.2 Příklady transformace
+
 ```css
 /* PŘED */
 .header { ... }
@@ -167,13 +183,16 @@ Thank You:          ty-
 ### 3.1 HEADER Komponenta (7× duplicitní)
 
 #### INDEX (ZACHOVAT)
-**Řádky:** 3-14  
-**Třídy:** `.header`, `.navbar`, `.logo`  
+
+**Řádky:** 3-14
+**Třídy:** `.header`, `.navbar`, `.logo`
 **Akce:** ✅ Žádná změna
 
 #### COURSE DETAIL
-**Řádky:** 5624-5636  
+
+**Řádky:** 5624-5636
 **Změny:**
+
 ```css
 /* PŘED */
 .header { ... }
@@ -185,66 +204,85 @@ Thank You:          ty-
 .cd-navbar { ... }
 .cd-logo { ... }
 ```
+
 **HTML soubor:** `detail-kurzu.html`
 
 #### DETAIL STYLE (Lesson Detail)
-**Řádky:** 8504-8516  
+
+**Řádky:** 8504-8516
 **Změny:**
+
 ```css
 .ld-header { ... }
 .ld-navbar { ... }
 .ld-logo { ... }
 ```
+
 **HTML soubor:** `detail-lekce.html`
 
 #### PROFILE PAGE
-**Řádky:** 11203-11215  
+
+**Řádky:** 11203-11215
 **Změny:**
+
 ```css
 .pf-header { ... }
 .pf-navbar { ... }
 .pf-logo { ... }
 ```
+
 **HTML soubor:** `muj-profil.html`
 
 #### SHOPPING CART
-**Řádky:** 14319-14331  
+
+**Řádky:** 14319-14331
 **Změny:**
+
 ```css
 .cart-header { ... }
 .cart-navbar { ... }
 .cart-logo { ... }
 ```
+
 **HTML soubory:** `nakupni-kosik.html`, `nakupni-kosik-prazdny.html`
 
 #### CHECKOUT
-**Řádky:** 15715-15727  
+
+**Řádky:** 15715-15727
 **Změny:**
+
 ```css
 .co-header { ... }
 .co-navbar { ... }
 .co-logo { ... }
 ```
+
 **HTML soubory:** `pokladna.html`, `pokladna2.html`
 
 #### INSTRUCTOR PROFILE
-**Řádky:** 16825-16837  
+
+**Řádky:** 16825-16837
 **Změny:**
+
 ```css
 .ip-header { ... }
 .ip-navbar { ... }
 .ip-logo { ... }
 ```
+
 **HTML soubor:** `profil-lektora.html`
 
 #### TEST PAGE
-**Řádky:** 18461-18473  
+
+**Řádky:** 18461-18473
 **Změny:**
+
 ```css
 .test-header { ... }
 .test-navbar { ... }
 .test-logo { ... }
 ```
+
 **HTML soubory:** `test1.html` až `test7.html` + všechny test varianty
 
 ---
@@ -252,11 +290,14 @@ Thank You:          ty-
 ### 3.2 SEARCHBAR Komponenta (7× duplicitní)
 
 #### INDEX (ZACHOVAT)
-**Řádky:** 16-35  
+
+**Řádky:** 16-35
 **Třídy:** `.searchbar-container`, `.search-form`, `.search-wrapper`, `.search-icon`, `.search-input`
 
 #### COURSE DETAIL
+
 **Řádky:** 5637-5657
+
 ```css
 .cd-searchbar-container { ... }
 .cd-search-form { ... }
@@ -266,7 +307,9 @@ Thank You:          ty-
 ```
 
 #### LESSON DETAIL
+
 **Řádky:** 8517-8541
+
 ```css
 .ld-searchbar-container { ... }
 .ld-search-form { ... }
@@ -276,7 +319,9 @@ Thank You:          ty-
 ```
 
 #### PROFILE
+
 **Řádky:** 11216-11240
+
 ```css
 .pf-searchbar-container { ... }
 .pf-search-form { ... }
@@ -286,7 +331,9 @@ Thank You:          ty-
 ```
 
 #### SHOPPING CART
+
 **Řádky:** 14332-14352
+
 ```css
 .cart-searchbar-container { ... }
 .cart-search-form { ... }
@@ -296,7 +343,9 @@ Thank You:          ty-
 ```
 
 #### CHECKOUT
+
 **Řádky:** 15728-15748
+
 ```css
 .co-searchbar-container { ... }
 .co-search-form { ... }
@@ -306,7 +355,9 @@ Thank You:          ty-
 ```
 
 #### INSTRUCTOR PROFILE
+
 **Řádky:** 16838-16858
+
 ```css
 .ip-searchbar-container { ... }
 .ip-search-form { ... }
@@ -316,7 +367,9 @@ Thank You:          ty-
 ```
 
 #### TEST PAGE
+
 **Řádky:** 18474-18498
+
 ```css
 .test-searchbar-container { ... }
 .test-search-form { ... }
@@ -330,12 +383,14 @@ Thank You:          ty-
 ### 3.3 MOBILE MENU Komponenta (7× duplicitní)
 
 #### INDEX (ZACHOVAT)
-**Řádky:** 37-64  
+
+**Řádky:** 37-64
 **Třídy:** `.hamburger`, `.hamburger-btn`, `.mobile-menu`, `.mobile-menu.active`, `.mobile-link`, `.mobile-btn`
 
 #### Přejmenování pro ostatní sekce:
 
 **COURSE DETAIL** (Řádky 5658-5686):
+
 ```css
 .cd-hamburger { ... }
 .cd-hamburger-btn { ... }
@@ -346,6 +401,7 @@ Thank You:          ty-
 ```
 
 **LESSON DETAIL** (Řádky 8542-8574):
+
 ```css
 .ld-hamburger { ... }
 .ld-hamburger-btn { ... }
@@ -356,6 +412,7 @@ Thank You:          ty-
 ```
 
 **PROFILE** (Řádky 11241-11273):
+
 ```css
 .pf-hamburger { ... }
 .pf-hamburger-btn { ... }
@@ -366,6 +423,7 @@ Thank You:          ty-
 ```
 
 **SHOPPING CART** (Řádky 14353-14381):
+
 ```css
 .cart-hamburger { ... }
 .cart-hamburger-btn { ... }
@@ -376,6 +434,7 @@ Thank You:          ty-
 ```
 
 **CHECKOUT** (Řádky 15749-15777):
+
 ```css
 .co-hamburger { ... }
 .co-hamburger-btn { ... }
@@ -386,6 +445,7 @@ Thank You:          ty-
 ```
 
 **INSTRUCTOR PROFILE** (Řádky 16859-16889):
+
 ```css
 .ip-hamburger { ... }
 .ip-hamburger-btn { ... }
@@ -396,6 +456,7 @@ Thank You:          ty-
 ```
 
 **TEST PAGE** (Řádky 18499-18531):
+
 ```css
 .test-hamburger { ... }
 .test-hamburger-btn { ... }
@@ -410,12 +471,14 @@ Thank You:          ty-
 ### 3.4 DESKTOP MENU Komponenta (7× duplicitní)
 
 #### INDEX (ZACHOVAT)
-**Řádky:** 66-90  
+
+**Řádky:** 66-90
 **Třídy:** `.navbar-menu`, `.nav-links`, `.nav-item`, `.nav-link`, `.dropdown`, `.dropdown-link`
 
 #### Přejmenování vzor:
 
 **COURSE DETAIL** (Řádky 5687-5712):
+
 ```css
 .cd-navbar-menu { ... }
 .cd-nav-links { ... }
@@ -426,36 +489,42 @@ Thank You:          ty-
 ```
 
 **LESSON DETAIL** (Řádky 8575-8602):
+
 ```css
 .ld-navbar-menu { ... }
 /* atd. */
 ```
 
 **PROFILE** (Řádky 11274-11301):
+
 ```css
 .pf-navbar-menu { ... }
 /* atd. */
 ```
 
 **SHOPPING CART** (Řádky 14382-14407):
+
 ```css
 .cart-navbar-menu { ... }
 /* atd. */
 ```
 
 **CHECKOUT** (Řádky 15778-15803):
+
 ```css
 .co-navbar-menu { ... }
 /* atd. */
 ```
 
 **INSTRUCTOR PROFILE** (Řádky 16890-16915):
+
 ```css
 .ip-navbar-menu { ... }
 /* atd. */
 ```
 
 **TEST PAGE** (Řádky 18532-18559):
+
 ```css
 .test-navbar-menu { ... }
 /* atd. */
@@ -466,12 +535,14 @@ Thank You:          ty-
 ### 3.5 BUTTONS Komponenta (7× duplicitní)
 
 #### INDEX (ZACHOVAT)
-**Řádky:** 92-107  
+
+**Řádky:** 92-107
 **Třídy:** `.btn-outline`, `.btn-primary`, `.icon-btn`, `.icon-btn-alt`
 
 #### Přejmenování vzor:
 
 **COURSE DETAIL** (Řádky 5713-5766):
+
 ```css
 .cd-btn-outline { ... }
 .cd-btn-primary { ... }
@@ -482,6 +553,7 @@ Thank You:          ty-
 **Poznámka:** COURSE DETAIL má rozšířenou verzi s dodatečnými třídami - ty také přejmenovat s prefixem `cd-`
 
 **LESSON DETAIL** (Řádky 8603-8627):
+
 ```css
 .ld-btn-outline { ... }
 .ld-btn-primary { ... }
@@ -490,6 +562,7 @@ Thank You:          ty-
 ```
 
 **PROFILE** (Řádky 11311-11319):
+
 ```css
 .pf-btn-outline { ... }
 .pf-btn-primary { ... }
@@ -498,6 +571,7 @@ Thank You:          ty-
 ```
 
 **SHOPPING CART** (Řádky 14408-14424):
+
 ```css
 .cart-btn-outline { ... }
 .cart-btn-primary { ... }
@@ -506,6 +580,7 @@ Thank You:          ty-
 ```
 
 **CHECKOUT** (Řádky 15804-15820):
+
 ```css
 .co-btn-outline { ... }
 .co-btn-primary { ... }
@@ -514,6 +589,7 @@ Thank You:          ty-
 ```
 
 **INSTRUCTOR PROFILE** (Řádky 16916-16924):
+
 ```css
 .ip-btn-outline { ... }
 .ip-btn-primary { ... }
@@ -522,6 +598,7 @@ Thank You:          ty-
 ```
 
 **TEST PAGE** (Řádky 18569-18577):
+
 ```css
 .test-btn-outline { ... }
 .test-btn-primary { ... }
@@ -536,11 +613,14 @@ Thank You:          ty-
 **Poznámka:** Hero sekce mají větší variabilitu - některé jsou značně upravené.
 
 #### INDEX (ZACHOVAT)
-**Řádky:** 109-269  
+
+**Řádky:** 109-269
 **Hlavní třídy:** `.hero-section`, `.hero-wrapper`, `.hero-gradient`, `.hero-content`, `.hero-texts`, `.hero-title`, `.hero-paragraph`, `.hero-buttons`
 
 #### COURSE ENROLLED (DETAIL KURZU PŘIHLÁŠENÝ)
+
 **Řádky:** 3394-3465
+
 ```css
 .ce-hero-gradient { ... }
 .ce-hero-bg { ... }
@@ -550,7 +630,9 @@ Thank You:          ty-
 ```
 
 #### COURSE DETAIL
+
 **Řádky:** 5809-5889
+
 ```css
 .cd-hero-section { ... }
 .cd-hero-wrapper { ... }
@@ -559,7 +641,9 @@ Thank You:          ty-
 ```
 
 #### LESSON DETAIL
+
 **Řádky:** 8655-8698
+
 ```css
 .ld-hero-section { ... }
 .ld-hero-gradient { ... }
@@ -567,7 +651,9 @@ Thank You:          ty-
 ```
 
 #### PROFILE
+
 **Řádky:** 11320-11368
+
 ```css
 .pf-hero-section { ... }
 .pf-hero-bg { ... }
@@ -575,7 +661,9 @@ Thank You:          ty-
 ```
 
 #### SHOPPING CART
+
 **Řádky:** 14425-14470
+
 ```css
 .cart-hero-section { ... }
 .cart-hero-gradient { ... }
@@ -583,7 +671,9 @@ Thank You:          ty-
 ```
 
 #### CHECKOUT
+
 **Řádky:** 15821-15866
+
 ```css
 .co-hero-section { ... }
 .co-hero-gradient { ... }
@@ -591,7 +681,9 @@ Thank You:          ty-
 ```
 
 #### INSTRUCTOR PROFILE
+
 **Řádky:** 16945-17102
+
 ```css
 .ip-hero-section { ... }
 .ip-hero-gradient { ... }
@@ -599,7 +691,9 @@ Thank You:          ty-
 ```
 
 #### TEST PAGE
+
 **Řádky:** 18578-18633
+
 ```css
 .test-hero-section { ... }
 .test-hero-bg { ... }
@@ -611,39 +705,50 @@ Thank You:          ty-
 ### 3.7 BUBBLES Komponenta (5× duplicitní)
 
 #### INDEX (ZACHOVAT)
-**Řádky:** 125, 129  
+
+**Řádky:** 125, 129
 **Třídy:** `.bubble-field`, `.bubble`
 
 #### COURSE DETAIL
+
 **Řádky:** 5615-5623
+
 ```css
 .cd-bubble-field { ... }
 .cd-bubble { ... }
 ```
 
 #### PROFILE
+
 **Řádky:** 11194-11202
+
 ```css
 .pf-bubble-field { ... }
 .pf-bubble { ... }
 ```
 
 #### SHOPPING CART
+
 **Řádky:** 14310-14318
+
 ```css
 .cart-bubble-field { ... }
 .cart-bubble { ... }
 ```
 
 #### CHECKOUT
+
 **Řádky:** 15706-15714
+
 ```css
 .co-bubble-field { ... }
 .co-bubble { ... }
 ```
 
 #### TEST PAGE
+
 **Řádky:** 18452-18460
+
 ```css
 .test-bubble-field { ... }
 .test-bubble { ... }
@@ -654,12 +759,15 @@ Thank You:          ty-
 ### 3.8 TABS Komponenta (5× duplicitní)
 
 #### COURSE ENROLLED (PRVNÍ VÝSKYT - ZACHOVAT JAKO REFERENČNÍ)
-**Řádky:** 3472-3507  
-**Třídy:** `.tabs-wrapper`, `.tabs`, `.tab`, `.tab.active`, `.tab:hover`  
+
+**Řádky:** 3472-3507
+**Třídy:** `.tabs-wrapper`, `.tabs`, `.tab`, `.tab.active`, `.tab:hover`
 **Obsahuje:** CSS proměnné `--indicator-left` a `--indicator-width`
 
 #### COURSE DETAIL
+
 **Řádky:** 6014-6062
+
 ```css
 .cd-tabs-wrapper { ... }
 .cd-tabs { ... }
@@ -669,7 +777,9 @@ Thank You:          ty-
 ```
 
 #### LESSON DETAIL
+
 **Řádky:** 8761-8814
+
 ```css
 .ld-tabs-wrapper { ... }
 .ld-tabs { ... }
@@ -678,7 +788,9 @@ Thank You:          ty-
 ```
 
 #### PROFILE - SETTINGS TAB
+
 **Řádky:** 12837-12862
+
 ```css
 .pf-tabs-wrapper { ... }
 .pf-tabs { ... }
@@ -687,7 +799,9 @@ Thank You:          ty-
 ```
 
 #### INSTRUCTOR PROFILE
+
 **Řádky:** 17166-17214
+
 ```css
 .ip-tabs-wrapper { ... }
 .ip-tabs { ... }
@@ -702,8 +816,9 @@ Thank You:          ty-
 **Poznámka:** Footer je jedna z nejrozsáhlejších komponent (~220 řádků na instanci)
 
 #### INDEX (ZACHOVAT)
-**Řádky:** 851-1070  
-**Hlavní třídy:** 
+
+**Řádky:** 851-1070**Hlavní třídy:**
+
 - `.footer`
 - `.footer-container`
 - `.footer-logo`
@@ -724,7 +839,9 @@ Thank You:          ty-
 - `.social-link`
 
 #### COURSE ENROLLED
+
 **Řádky:** 4025-4097
+
 ```css
 .ce-footer { ... }
 .ce-footer-container { ... }
@@ -734,7 +851,9 @@ Thank You:          ty-
 ```
 
 #### COURSE DETAIL
+
 **Řádky:** 6174-6394
+
 ```css
 .cd-footer { ... }
 .cd-footer-container { ... }
@@ -742,7 +861,9 @@ Thank You:          ty-
 ```
 
 #### LESSON DETAIL
+
 **Řádky:** 9652-9728
+
 ```css
 .ld-footer { ... }
 .ld-footer-container { ... }
@@ -750,7 +871,9 @@ Thank You:          ty-
 ```
 
 #### PROFILE
+
 **Řádky:** 12148-12230
+
 ```css
 .pf-footer { ... }
 .pf-footer-container { ... }
@@ -758,7 +881,9 @@ Thank You:          ty-
 ```
 
 #### SHOPPING CART
+
 **Řádky:** 14918-14993
+
 ```css
 .cart-footer { ... }
 .cart-footer-container { ... }
@@ -766,7 +891,9 @@ Thank You:          ty-
 ```
 
 #### CHECKOUT
+
 **Řádky:** 16378-16454
+
 ```css
 .co-footer { ... }
 .co-footer-container { ... }
@@ -774,7 +901,9 @@ Thank You:          ty-
 ```
 
 #### INSTRUCTOR PROFILE
+
 **Řádky:** 17606-17825
+
 ```css
 .ip-footer { ... }
 .ip-footer-container { ... }
@@ -786,28 +915,36 @@ Thank You:          ty-
 ### 3.10 TAB CONTENT Komponenta (4× duplicitní)
 
 #### COURSE ENROLLED (REFERENČNÍ)
+
 **Řádky:** 3508-3514
+
 ```css
 .tab-content { ... }
 .tab-content.active { ... }
 ```
 
 #### COURSE DETAIL
+
 **Řádky:** 6063-6088
+
 ```css
 .cd-tab-content { ... }
 .cd-tab-content.active { ... }
 ```
 
 #### LESSON DETAIL
+
 **Řádky:** 8815-8907
+
 ```css
 .ld-tab-content { ... }
 .ld-tab-content.active { ... }
 ```
 
 #### INSTRUCTOR PROFILE
+
 **Řádky:** 17215-17225
+
 ```css
 .ip-tab-content { ... }
 .ip-tab-content.active { ... }
@@ -820,37 +957,49 @@ Thank You:          ty-
 **Poznámka:** Sidebar má různé účely v různých sekcích
 
 #### COURSE ENROLLED (REFERENČNÍ)
+
 **Řádky:** 3833-3847
+
 ```css
 .sidebar { ... }
 ```
 
 #### COURSE DETAIL
+
 **Řádky:** 6089-6173
+
 ```css
 .cd-sidebar { ... }
 ```
 
 #### LESSON DETAIL
+
 **Řádky:** 8942-9150
+
 ```css
 .ld-sidebar { ... }
 ```
 
 #### PROFILE
+
 **Řádky:** 11997-12147
+
 ```css
 .pf-sidebar { ... }
 ```
 
 #### SHOPPING CART
+
 **Řádky:** 14691-14774
+
 ```css
 .cart-sidebar { ... }
 ```
 
 #### TEST PAGE
+
 **Řádky:** 19460-19469
+
 ```css
 .test-sidebar { ... }
 ```
@@ -860,11 +1009,14 @@ Thank You:          ty-
 ### 3.12 REVIEWS SECTION Komponenta (3× duplicitní)
 
 #### INDEX (ZACHOVAT)
-**Řádky:** 692-850  
+
+**Řádky:** 692-850
 **Třídy:** `.reviews-section`, `.reviews-header`, `.reviews-title`, `.reviews-subtitle`, `.myReviewsSwiper`, `.review-card`, atd.
 
 #### COURSE DETAIL
+
 **Řádky:** 6893-7126
+
 ```css
 .cd-reviews-section { ... }
 .cd-reviews-header { ... }
@@ -874,7 +1026,9 @@ Thank You:          ty-
 ```
 
 #### INSTRUCTOR PROFILE
+
 **Řádky:** 18093-18431
+
 ```css
 .ip-reviews-section { ... }
 .ip-reviews-header { ... }
@@ -886,13 +1040,17 @@ Thank You:          ty-
 ### 3.13 Další duplicitní komponenty
 
 #### CONTENT CARD (4×)
+
 **Referenční:** Řádky 3466-3471 (COURSE ENROLLED)
+
 - COURSE DETAIL: `cd-content-card`
 - LESSON DETAIL: `ld-content-card`
 - INSTRUCTOR PROFILE: `ip-content-card`
 
 #### MAIN CONTENT (4×)
+
 **Referenční:** Řádky 1581-1585
+
 - COURSE ENROLLED: `ce-main-content`
 - COURSE DETAIL: `cd-main-content`
 - LESSON DETAIL: `ld-main-content`
@@ -903,12 +1061,14 @@ Thank You:          ty-
 ## 4. Implementační kroky
 
 ### Fáze 1: Příprava (KRITICKÁ)
+
 1. ✅ **Vytvořit backup celého projektu**
 2. ✅ **Vytvořit novou Git branch** `feature/rename-duplicate-classes`
 3. ✅ **Připravit mapping tabulku** (tento dokument)
 4. ✅ **Otestovat současný web** - zaznamenat všechny funkcionality
 
 ### Fáze 2: CSS Úpravy
+
 Pro každou sekci (kromě INDEX):
 
 1. **Identifikovat řádky** podle DUPLICITY_DOKUMENTACE.md
@@ -928,6 +1088,7 @@ Pro každou sekci (kromě INDEX):
    ```
 
 ### Fáze 3: HTML Úpravy
+
 Pro každý HTML soubor:
 
 1. **Identifikovat soubor** podle mappingu
@@ -936,11 +1097,13 @@ Pro každý HTML soubor:
 4. **Zkontrolovat JavaScript** reference (pokud existují)
 
 ### Fáze 4: JavaScript Úpravy
+
 1. **Vyhledat** všechny `.querySelector()` a `.getElementsByClassName()`
 2. **Aktualizovat** názvy tříd
 3. **Zkontrolovat** event listenery
 
 ### Fáze 5: Testování
+
 1. **Otevřít každou stránku** v prohlížeči
 2. **Ověřit vzhled** - porovnat se screenshoty z Fáze 1
 3. **Otestovat interaktivitu**:
@@ -953,6 +1116,7 @@ Pro každý HTML soubor:
 5. **Konzole** - zkontrolovat, že nejsou chyby
 
 ### Fáze 6: Dokumentace
+
 1. **Aktualizovat ZMENY.md** se skutečnými změnami
 2. **Vytvořit migration guide** pro ostatní vývojáře
 3. **Zdokumentovat** všechny nalezené problémy
@@ -964,16 +1128,18 @@ Pro každý HTML soubor:
 ### 5.1 CSS Checklist
 
 #### HEADER Komponenta
-- [ ] INDEX - Zachováno ✅
-- [ ] COURSE DETAIL - Přejmenováno na `cd-*`
-- [ ] LESSON DETAIL - Přejmenováno na `ld-*`
-- [ ] PROFILE - Přejmenováno na `pf-*`
-- [ ] SHOPPING CART - Přejmenováno na `cart-*`
-- [ ] CHECKOUT - Přejmenováno na `co-*`
-- [ ] INSTRUCTOR PROFILE - Přejmenováno na `ip-*`
-- [ ] TEST PAGE - Přejmenováno na `test-*`
+
+- [X] INDEX - Zachováno ✅
+- [X] COURSE DETAIL - Přejmenováno na `cd-*`
+- [X] LESSON DETAIL - Přejmenováno na `ld-*`
+- [X] PROFILE - Přejmenováno na `pf-*`
+- [X] SHOPPING CART - Přejmenováno na `cart-*`
+- [X] CHECKOUT - Přejmenováno na `co-*`
+- [X] INSTRUCTOR PROFILE - Přejmenováno na `ip-*`
+- [X] TEST PAGE - Přejmenováno na `test-*`
 
 #### SEARCHBAR Komponenta
+
 - [ ] INDEX - Zachováno ✅
 - [ ] COURSE DETAIL - `cd-searchbar-*`
 - [ ] LESSON DETAIL - `ld-searchbar-*`
@@ -984,6 +1150,7 @@ Pro každý HTML soubor:
 - [ ] TEST PAGE - `test-searchbar-*`
 
 #### MOBILE MENU Komponenta
+
 - [ ] INDEX - Zachováno ✅
 - [ ] COURSE DETAIL - `cd-hamburger`, `cd-mobile-*`
 - [ ] LESSON DETAIL - `ld-hamburger`, `ld-mobile-*`
@@ -994,6 +1161,7 @@ Pro každý HTML soubor:
 - [ ] TEST PAGE - `test-hamburger`, `test-mobile-*`
 
 #### DESKTOP MENU Komponenta
+
 - [ ] INDEX - Zachováno ✅
 - [ ] COURSE DETAIL - `cd-navbar-menu`, `cd-nav-*`, `cd-dropdown*`
 - [ ] LESSON DETAIL - `ld-navbar-menu`, `ld-nav-*`, `ld-dropdown*`
@@ -1004,6 +1172,7 @@ Pro každý HTML soubor:
 - [ ] TEST PAGE - `test-navbar-menu`, `test-nav-*`, `test-dropdown*`
 
 #### BUTTONS Komponenta
+
 - [ ] INDEX - Zachováno ✅
 - [ ] COURSE DETAIL - `cd-btn-*`, `cd-icon-btn*`
 - [ ] LESSON DETAIL - `ld-btn-*`, `ld-icon-btn*`
@@ -1014,6 +1183,7 @@ Pro každý HTML soubor:
 - [ ] TEST PAGE - `test-btn-*`, `test-icon-btn*`
 
 #### FOOTER Komponenta
+
 - [ ] INDEX - Zachováno ✅
 - [ ] COURSE ENROLLED - `ce-footer*`
 - [ ] COURSE DETAIL - `cd-footer*`
@@ -1024,6 +1194,7 @@ Pro každý HTML soubor:
 - [ ] INSTRUCTOR PROFILE - `ip-footer*`
 
 #### HERO SECTION
+
 - [ ] INDEX - Zachováno ✅
 - [ ] COURSE ENROLLED - `ce-hero-*`
 - [ ] COURSE DETAIL - `cd-hero-*`
@@ -1035,6 +1206,7 @@ Pro každý HTML soubor:
 - [ ] TEST PAGE - `test-hero-*`
 
 #### BUBBLES
+
 - [ ] INDEX - Zachováno ✅
 - [ ] COURSE DETAIL - `cd-bubble*`
 - [ ] PROFILE - `pf-bubble*`
@@ -1043,6 +1215,7 @@ Pro každý HTML soubor:
 - [ ] TEST PAGE - `test-bubble*`
 
 #### TABS
+
 - [ ] COURSE ENROLLED - Zachováno jako referenční ✅
 - [ ] COURSE DETAIL - `cd-tabs*`, `cd-tab*`
 - [ ] LESSON DETAIL - `ld-tabs*`, `ld-tab*`
@@ -1050,12 +1223,14 @@ Pro každý HTML soubor:
 - [ ] INSTRUCTOR PROFILE - `ip-tabs*`, `ip-tab*`
 
 #### TAB CONTENT
+
 - [ ] COURSE ENROLLED - Zachováno ✅
 - [ ] COURSE DETAIL - `cd-tab-content*`
 - [ ] LESSON DETAIL - `ld-tab-content*`
 - [ ] INSTRUCTOR PROFILE - `ip-tab-content*`
 
 #### SIDEBAR
+
 - [ ] COURSE ENROLLED - Zachováno ✅
 - [ ] COURSE DETAIL - `cd-sidebar*`
 - [ ] LESSON DETAIL - `ld-sidebar*`
@@ -1064,6 +1239,7 @@ Pro každý HTML soubor:
 - [ ] TEST PAGE - `test-sidebar*`
 
 #### REVIEWS SECTION
+
 - [ ] INDEX - Zachováno ✅
 - [ ] COURSE DETAIL - `cd-reviews-*`, `cd-review-*`
 - [ ] INSTRUCTOR PROFILE - `ip-reviews-*`, `ip-review-*`
@@ -1073,9 +1249,11 @@ Pro každý HTML soubor:
 ### 5.2 HTML Checklist
 
 #### Homepage
+
 - [ ] `index.html` - Žádné změny (používá referenční třídy)
 
 #### Course Pages
+
 - [ ] `detail-kurzu.html` - Aktualizovat na `cd-*` prefixy
 - [ ] `detail-kurzu-prihlaseny.html` - Aktualizovat na `ce-*` prefixy
 - [ ] `detail-kurzu-prihlaseny-hotovo.html` - Aktualizovat na `ce-*` prefixy
@@ -1083,18 +1261,22 @@ Pro každý HTML soubor:
 - [ ] `detail-lekce.html` - Aktualizovat na `ld-*` prefixy
 
 #### Profile
+
 - [ ] `muj-profil.html` - Aktualizovat na `pf-*` prefixy
 
 #### Shopping & Checkout
+
 - [ ] `nakupni-kosik.html` - Aktualizovat na `cart-*` prefixy
 - [ ] `nakupni-kosik-prazdny.html` - Aktualizovat na `cart-*` prefixy
 - [ ] `pokladna.html` - Aktualizovat na `co-*` prefixy
 - [ ] `pokladna2.html` - Aktualizovat na `co-*` prefixy
 
 #### Instructor
+
 - [ ] `profil-lektora.html` - Aktualizovat na `ip-*` prefixy
 
 #### Tests
+
 - [ ] `test1.html` - Aktualizovat na `test-*` prefixy
 - [ ] `test2.html` - Aktualizovat na `test-*` prefixy
 - [ ] `test3.html` - Aktualizovat na `test-*` prefixy
@@ -1111,6 +1293,7 @@ Pro každý HTML soubor:
 - [ ] `test_vyhodnoceni5.html` - Aktualizovat na `test-*` prefixy
 
 #### Other
+
 - [ ] `kategorie-kurzu.html` - Aktualizovat na `cat-*` prefixy (částečně)
 - [ ] `thankYou.html` - Aktualizovat na `ty-*` prefixy
 
@@ -1130,6 +1313,7 @@ Pro každý HTML soubor:
 ### 5.4 Testovací Checklist
 
 #### Vizuální Testy
+
 - [ ] Homepage - Vzhled OK
 - [ ] Course Detail - Vzhled OK
 - [ ] Course Enrolled - Vzhled OK
@@ -1141,6 +1325,7 @@ Pro každý HTML soubor:
 - [ ] Test Pages - Vzhled OK
 
 #### Funkční Testy
+
 - [ ] Hamburger menu - Otevírá/zavírá se
 - [ ] Desktop menu - Dropdown funguje
 - [ ] Search bar - Funguje na všech stránkách
@@ -1152,6 +1337,7 @@ Pro každý HTML soubor:
 - [ ] Swipery - Scrollují správně
 
 #### Responsive Testy
+
 - [ ] Mobile (320px-767px)
 - [ ] Tablet (768px-1023px)
 - [ ] Desktop (1024px+)
@@ -1161,22 +1347,22 @@ Pro každý HTML soubor:
 
 ## 6. Odhadovaný čas implementace
 
-| Fáze | Čas | Poznámka |
-|------|-----|----------|
-| Příprava | 1 hodina | Backup, Git branch, testování |
-| CSS HEADER | 2 hodiny | 7 instancí × ~15 min |
-| CSS SEARCHBAR | 2 hodiny | 7 instancí × ~15 min |
-| CSS MOBILE MENU | 2 hodiny | 7 instancí × ~15 min |
-| CSS DESKTOP MENU | 2 hodiny | 7 instancí × ~15 min |
-| CSS BUTTONS | 2 hodiny | 7 instancí × ~15 min |
-| CSS FOOTER | 4 hodiny | 7 instancí × ~30 min (rozsáhlé) |
-| CSS HERO | 3 hodiny | 8 instancí × ~20 min |
-| CSS Ostatní | 4 hodiny | Bubbles, Tabs, Sidebar, atd. |
-| HTML Úpravy | 8 hodin | ~25 souborů × ~20 min |
-| JavaScript | 2 hodiny | Kontrola a úpravy |
-| Testování | 6 hodin | Důkladné testování všech stránek |
-| Dokumentace | 2 hodiny | Finalizace dokumentace |
-| **CELKEM** | **40 hodin** | ~5 pracovních dnů |
+| Fáze            | Čas               | Poznámka                              |
+| ---------------- | ------------------ | -------------------------------------- |
+| Příprava       | 1 hodina           | Backup, Git branch, testování        |
+| CSS HEADER       | 2 hodiny           | 7 instancí × ~15 min                 |
+| CSS SEARCHBAR    | 2 hodiny           | 7 instancí × ~15 min                 |
+| CSS MOBILE MENU  | 2 hodiny           | 7 instancí × ~15 min                 |
+| CSS DESKTOP MENU | 2 hodiny           | 7 instancí × ~15 min                 |
+| CSS BUTTONS      | 2 hodiny           | 7 instancí × ~15 min                 |
+| CSS FOOTER       | 4 hodiny           | 7 instancí × ~30 min (rozsáhlé)    |
+| CSS HERO         | 3 hodiny           | 8 instancí × ~20 min                 |
+| CSS Ostatní     | 4 hodiny           | Bubbles, Tabs, Sidebar, atd.           |
+| HTML Úpravy     | 8 hodin            | ~25 souborů × ~20 min                |
+| JavaScript       | 2 hodiny           | Kontrola a úpravy                     |
+| Testování      | 6 hodin            | Důkladné testování všech stránek |
+| Dokumentace      | 2 hodiny           | Finalizace dokumentace                 |
+| **CELKEM** | **40 hodin** | ~5 pracovních dnů                    |
 
 ---
 
@@ -1185,35 +1371,37 @@ Pro každý HTML soubor:
 ### ⚠️ VYSOKÁ RIZIKA
 
 1. **Rozsah změn:**
+
    - 20,776 řádků CSS
    - ~25 HTML souborů
    - Potenciálně všechny JS soubory
    - **Riziko:** Vysoká pravděpodobnost chyb
-
 2. **Cascade efekty:**
+
    - Změna jedné třídy může ovlivnit více míst
    - Složité selektory typu `.header .navbar .dropdown`
    - **Riziko:** Nefunkční komponenty
-
 3. **JavaScript závislosti:**
+
    - Event listenery mohou hledat staré třídy
    - **Riziko:** Ztráta interaktivity
-
 4. **Testování:**
+
    - 25+ HTML stránek × 4 breakpointy = 100+ scénářů
    - **Riziko:** Nenalezené chyby
 
 ### ⚠️ STŘEDNÍ RIZIKA
 
 1. **Konzistence:**
+
    - Snadné udělat překlep v prefix
    - **Mitigace:** Automatizace pomocí skriptů
-
 2. **Údržba:**
+
    - Duplicitní kód zůstává
    - **Mitigace:** Toto je dočasné řešení před refaktoringem
-
 3. **Onboarding:**
+
    - Noví vývojáři musí pochopit systém prefixů
    - **Mitigace:** Dobrá dokumentace
 
@@ -1224,12 +1412,14 @@ Pro každý HTML soubor:
 ### Místo přejmenování → Odstranění duplicit
 
 **Postup:**
+
 1. ✅ Zachovat INDEX verze všech komponent
 2. ✅ Odstranit duplicitní sekce z CSS
 3. ✅ Všechny HTML stránky použijí stejné třídy
 4. ✅ Vytvořit page-specific overrides pouze pro skutečně odlišné styly
 
 **Výhody:**
+
 - ✅ Redukce kódu o ~21% (4,410 řádků)
 - ✅ Jednodušší údržba
 - ✅ Konzistentní design
@@ -1237,6 +1427,7 @@ Pro každý HTML soubor:
 - ✅ Rychlejší implementace (1-2 dny vs 5 dnů)
 
 **Nevýhody:**
+
 - ⚠️ Méně flexibility pro page-specific změny
 - ⚠️ Nutnost ověřit, že všechny stránky používají stejné názvy tříd
 
@@ -1245,12 +1436,14 @@ Pro každý HTML soubor:
 ## 9. Doporučení
 
 ### Pro implementaci přejmenování:
+
 1. **Začít s jednou komponentou** (např. HEADER)
 2. **Vytvořit automatizační skript** pro nahrazování
 3. **Testovat po každé komponentě**
 4. **Používat Git commits** po každé úspěšné změně
 
 ### Pro implementaci odstranění duplicit:
+
 1. **Začít s nejjednodušší komponentou** (např. BUBBLES)
 2. **Ověřit funkčnost** na všech stránkách
 3. **Postupovat od nejmenších k největším** komponentám
@@ -1260,15 +1453,17 @@ Pro každý HTML soubor:
 
 ## 10. Závěr
 
-Tento dokument poskytuje **kompletní plán** pro přejmenování duplicitních CSS tříd podle sekcí. 
+Tento dokument poskytuje **kompletní plán** pro přejmenování duplicitních CSS tříd podle sekcí.
 
 **Doporučení:**
+
 - ⚠️ **Zvážit alternativní přístup** (odstranění duplicit)
 - ✅ **Pokud pokračovat s přejmenováním:** Postupovat systematicky podle tohoto plánu
 - ✅ **Používat automatizaci** kde je to možné
 - ✅ **Důkladně testovat** po každé změně
 
 **Další kroky:**
+
 1. Rozhodnout mezi přejmenováním vs. odstraněním duplicit
 2. Vytvořit Git branch
 3. Začít s pilotní implementací (1 komponenta)
@@ -1277,6 +1472,6 @@ Tento dokument poskytuje **kompletní plán** pro přejmenování duplicitních 
 
 ---
 
-**Dokument připraven:** 14. listopadu 2025  
-**Verze:** 1.0  
+**Dokument připraven:** 14. listopadu 2025
+**Verze:** 1.0
 **Status:** Návrh k revizi

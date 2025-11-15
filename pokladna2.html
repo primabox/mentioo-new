@@ -18,10 +18,10 @@
     </div>
 
     <!-- HEADER -->
-    <header class="header">
-        <nav class="navbar">
+    <header class="co-header">
+        <nav class="co-navbar">
             <!-- Logo -->
-            <div class="logo">
+            <div class="co-logo">
                 <a href="index.html">
                     <img src="img/Logo.png" alt="Logo" class="w-32" />
                 </a>
@@ -142,10 +142,11 @@
                                 <img src="img/bank_transfer.png" alt="" class="w-[40px] h-[40px]">
                             </div>
                         </div>
-                        
+
                         <!-- Online převod instrukce -->
                         <div id="online-transfer-info" class="payment-info-box" style="display: none;">
-                            <p class="payment-info-text">Po vytvoření objednávky vám zašleme instrukce, jak peníze převést bankovním převodem na náš účet.</p>
+                            <p class="payment-info-text">Po vytvoření objednávky vám zašleme instrukce, jak peníze
+                                převést bankovním převodem na náš účet.</p>
                         </div>
 
                         <div class="payment-divider"></div>
@@ -159,7 +160,7 @@
                             <div class="payment-icons-group">
                                 <img src="img/masterCardText.png" alt="Mastercard" class="w-[51px] h-[40px]">
                                 <img src="img/Visa.png" alt="Visa" class="w-[71px] h-[40px]">
-                            </div> 
+                            </div>
                         </div>
 
                         <!-- Card payment form -->
@@ -169,22 +170,25 @@
                                     <label for="card-holder" class="card-form-label">Držitel karty</label>
                                     <input type="text" id="card-holder" class="card-form-input" placeholder="">
                                 </div>
-                                
+
                                 <div class="card-form-group">
                                     <label for="card-number" class="card-form-label">Číslo karty</label>
-                                    <input type="text" id="card-number" class="card-form-input" placeholder="0000 0000 0000 0000" maxlength="19">
+                                    <input type="text" id="card-number" class="card-form-input"
+                                        placeholder="0000 0000 0000 0000" maxlength="19">
                                 </div>
-                                
+
                                 <div class="card-form-group">
                                     <label for="card-expiry" class="card-form-label">Datum platnosti</label>
-                                    <input type="text" id="card-expiry" class="card-form-input" placeholder="MM/RR" maxlength="5">
+                                    <input type="text" id="card-expiry" class="card-form-input" placeholder="MM/RR"
+                                        maxlength="5">
                                 </div>
-                                
+
                                 <div class="card-form-group">
                                     <label for="card-cvv" class="card-form-label">Bezpečnostní kód</label>
-                                    <input type="text" id="card-cvv" class="card-form-input" placeholder="000" maxlength="3">
+                                    <input type="text" id="card-cvv" class="card-form-input" placeholder="000"
+                                        maxlength="3">
                                 </div>
-                                
+
                                 <div class="card-form-checkbox">
                                     <input type="checkbox" id="save-card" class="terms-checkbox">
                                     <label class="terms-label">Uložit kartu pro budoucí platby</label>
@@ -207,7 +211,8 @@
 
                         <!-- PayPal info -->
                         <div id="paypal-info" class="payment-info-box" style="display: none;">
-                            <p class="payment-info-text">Budete přesměrováni přímo na službu PayPal, kde budete moci platbu dokončit.</p>
+                            <p class="payment-info-text">Budete přesměrováni přímo na službu PayPal, kde budete moci
+                                platbu dokončit.</p>
                         </div>
 
                         <div class="payment-divider"></div>
@@ -216,7 +221,8 @@
                         <div class="payment-terms">
                             <input type="checkbox" id="terms" class="terms-checkbox">
                             <label for="terms" class="terms-label">
-                                Souhlasím s <a href="#" class="terms-link">Obchodními podmínkami</a> a s <a href="#" class="terms-link">Podmínkami zpracování osobních údajů</a>
+                                Souhlasím s <a href="#" class="terms-link">Obchodními podmínkami</a> a s <a href="#"
+                                    class="terms-link">Podmínkami zpracování osobních údajů</a>
                             </label>
                         </div>
                     </div>
@@ -239,8 +245,9 @@
                                 <div class="summary-price-block">
                                     <span class="summary-discount-tag">-30 %</span>
                                     <div class="summary-prices">
-                                        <span class="summary-price-sale">8 500 Kč <span class="summary-price-old">12 000 Kč</span></span>
-                                        
+                                        <span class="summary-price-sale">8 500 Kč <span class="summary-price-old">12 000
+                                                Kč</span></span>
+
                                     </div>
                                 </div>
                             </div>
@@ -254,8 +261,9 @@
                                 <div class="summary-price-block">
                                     <span class="summary-discount-tag">-30 %</span>
                                     <div class="summary-prices">
-                                        <span class="summary-price-sale">8 500 Kč <span class="summary-price-old">12 000 Kč</span></span>
-                                  
+                                        <span class="summary-price-sale">8 500 Kč <span class="summary-price-old">12 000
+                                                Kč</span></span>
+
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +287,7 @@
                             <span class="total-label">Celkem</span>
                             <span class="total-price">16 500 Kč</span>
                         </div>
-                        
+
                         <!-- Payment Button -->
                         <button class="summary-payment-btn">Zaplatit</button>
                     </div>
@@ -402,11 +410,11 @@
         const paypalRadio = document.getElementById('paypal');
         const paypalInfo = document.getElementById('paypal-info');
         const allPaymentRadios = document.querySelectorAll('input[name="payment"]');
-        
+
         let lastChecked = null;
-        
+
         allPaymentRadios.forEach(radio => {
-            radio.addEventListener('click', function() {
+            radio.addEventListener('click', function () {
                 // Toggle off if clicking the same radio button
                 if (lastChecked === this) {
                     this.checked = false;
@@ -414,16 +422,16 @@
                 } else {
                     lastChecked = this;
                 }
-                
+
                 // Update visibility of payment info/forms
                 updatePaymentDisplay();
             });
-            
-            radio.addEventListener('change', function() {
+
+            radio.addEventListener('change', function () {
                 updatePaymentDisplay();
             });
         });
-        
+
         function updatePaymentDisplay() {
             // Toggle online transfer info
             if (onlineTransferRadio.checked) {
@@ -431,14 +439,14 @@
             } else {
                 onlineTransferInfo.style.display = 'none';
             }
-            
+
             // Toggle card payment form
             if (cardRadio.checked) {
                 cardPaymentForm.style.display = 'block';
             } else {
                 cardPaymentForm.style.display = 'none';
             }
-            
+
             // Toggle PayPal info
             if (paypalRadio.checked) {
                 paypalInfo.style.display = 'block';
@@ -450,4 +458,3 @@
 </body>
 
 </html>
-
